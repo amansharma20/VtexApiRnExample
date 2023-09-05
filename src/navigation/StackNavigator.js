@@ -38,6 +38,7 @@ import GuestCartScreen from '../screens/guestCart/GuestCartScreen';
 import AddAddressScreen from '../screens/address/AddAddressScreen';
 import MapScreen from '../screens/location/MapScreen';
 import {theme} from '../atoms/theme';
+import ProductDetailsScreenVtex from '../screens/product/ProductDetailsScreenVtex';
 
 export const AuthContext = React.createContext();
 
@@ -253,6 +254,11 @@ export default function StackNavigator() {
           name="WishlistItemsScreen"
           component={WishlistItemsScreen}
         />
+        <Stack.Screen
+          name="ProductDetailsScreenVtex"
+          component={ProductDetailsScreenVtex}
+        />
+
         <Stack.Screen
           name="SushittoHomeScreen"
           component={SushittoHomeScreen}

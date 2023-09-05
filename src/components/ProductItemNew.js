@@ -303,7 +303,7 @@ export default function ProductItem({item, includedData, index}) {
       padding="s12">
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('ProductDetailsScreen', {
+          navigation.navigate('ProductDetailsScreenVtex', {
             product: item,
           });
         }}>
