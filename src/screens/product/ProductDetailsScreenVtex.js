@@ -39,7 +39,7 @@ import {calculatePrice} from '../../utils/CommonFunctions';
 const ProductDetailsScreenVtex = props => {
   //   const propData = props.route.params.product;
   const abstractSku = props.route.params.product.ProductId;
-  console.log('abstractSku: ', abstractSku);
+  // console.log('abstractSku: ', abstractSku);
   // const abstractSku = '40000038';
 
   const navigation = useNavigation();
@@ -171,7 +171,7 @@ const ProductDetailsScreenVtex = props => {
   };
   const renderItem = ({item, index}) => {
     const backgroundColor =
-      item.sku == selectedSkuId ? theme.colors.lightGrey : '#FFF';
+      item.sku == selectedSkuId ? theme.colors.lightGreen : '#FFF';
     const color = item.sku == selectedSkuId ? 'white' : 'black';
 
     return (
@@ -223,7 +223,7 @@ const ProductDetailsScreenVtex = props => {
                 <Box>
                   {/* <Text variant="regular18">{name}</Text> */}
                   {/* <Row title={'Brand : '} value={brand} /> */}
-                  <Box>
+                  <Box marginVertical="s16">
                     {productData?.skus?.length >= 2 && (
                       <Box>
                         <Text variant="bold16" mt="s4">
@@ -247,18 +247,14 @@ const ProductDetailsScreenVtex = props => {
                   Description :{' '}
                 </Text>
                 <Text>{description}</Text> */}
-                <Text
-                  mt="s6"
-                  variant="regular16"
-                  // style={{fontWeight: 'bold'}}
-                >
+                <Text mt="s6" variant="bold16">
                   {/* {productOffer != null
                     ? ''
                     : `Price $${calculatePrice(
                         productData?.[selectedVariantIndex]?.price?.attributes
                           ?.price,
                       )}`} */}
-                  Pice ${productData?.skus?.[selectedVariantIndex]?.bestPrice}
+                  Price ${productData?.skus?.[selectedVariantIndex]?.bestPrice}
                 </Text>
                 {productData?.available !== true ? (
                   <Text color="red">Product is not available </Text>
@@ -327,14 +323,14 @@ const styles = StyleSheet.create({
     height: 200,
   },
   item: {
-    marginVertical: 8,
+    marginVertical: 4,
     padding: 10,
     borderRadius: 8,
     borderWidth: 1,
     borderColor: theme.colors.border,
   },
   title: {
-    fontSize: 32,
+    fontSize: 14,
   },
   row: {
     flexDirection: 'row',
