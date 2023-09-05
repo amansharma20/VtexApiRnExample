@@ -29,7 +29,7 @@ const VtexBestSelling = () => {
         padding="s12">
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('ProductDetailsScreen', {
+            navigation.navigate('ProductDetailsScreenVtex', {
               product: item,
             });
           }}>

@@ -36,10 +36,11 @@ import {guestCartData} from '../../redux/GuestCartApi/GuestCartApiAsyncThunk';
 import {applicationProperties} from '../../utils/application.properties';
 import {calculatePrice} from '../../utils/CommonFunctions';
 
-const ProductDetailsScreen = props => {
+const ProductDetailsScreenVtex = props => {
   //   const propData = props.route.params.product;
-  //   const abstractSku = props.route.params.product.abstractSku;
-  const abstractSku = '40000038';
+  const abstractSku = props.route.params.product.ProductId;
+  console.log('abstractSku: ', abstractSku);
+  // const abstractSku = '40000038';
 
   const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -299,7 +300,7 @@ const ProductDetailsScreen = props => {
             backgroundColor="white"
             style={theme.cardVariants.bottomButtonShadow}>
             <CommonSolidButton
-              title={!isLoading ? 'Add to Cart' : 'Loading...'}
+              title={!isLoading ? 'Add to Cartt' : 'Loading...'}
               // onPress={addToCartHandler}
               // onPress={onPressAddToCart}
               disabled={!productAvailability}
@@ -361,4 +362,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProductDetailsScreen;
+export default ProductDetailsScreenVtex;
