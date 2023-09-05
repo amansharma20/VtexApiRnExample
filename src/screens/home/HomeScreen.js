@@ -16,6 +16,7 @@ import {getCartDataNew} from '../../redux/newCartApi/NewCartApiAsyncThunk';
 import {useDispatch, useSelector} from 'react-redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {guestCartData} from '../../redux/GuestCartApi/GuestCartApiAsyncThunk';
+import VtexBestSelling from './vtexBestSelling/VtexBestSelling';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -29,8 +30,9 @@ const HomeScreen = () => {
   const ViewData = [
     'HomeHeader',
     'ContentFullSection',
-    'SelectShippingMethod',
-    'CategorySection',
+    // 'SelectShippingMethod',
+    // 'CategorySection',
+    'VtexBestSelling',
   ];
 
   const renderHomeItems = useCallback(({item}) => {
@@ -44,8 +46,11 @@ const HomeScreen = () => {
       case 'SelectShippingMethod':
         return <SelectShippingMethod />;
 
-      case 'CategorySection':
-        return <CategorySection />;
+      // case 'CategorySection':
+      //   return <CategorySection />;
+
+      case 'VtexBestSelling':
+        return <VtexBestSelling />;
 
       default:
         return <></>;

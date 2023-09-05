@@ -9,9 +9,9 @@ const PoweredBySpryker = () => {
     <Box alignItems="center">
       <Text>Powered by</Text>
       <FastImage
-        source={Images.sprykerLogo}
+        source={Images.VTEX_Logo}
         style={styles.sprykerLogo}
-        resizeMode="cover"
+        resizeMode="contain"
       />
     </Box>
   );
@@ -21,7 +21,7 @@ export default PoweredBySpryker;
 
 const styles = StyleSheet.create({
   sprykerLogo: {
-    height: 50,
+    height: 65,
     alignItems: 'center',
     width: 180,
   },

@@ -32,6 +32,7 @@ const SushittoHomeScreen = () => {
           .get(
             // 'https://categoriestree-5g04sc.5sc6y6-2.usa-e2.cloudhub.io/catalogsearch',
             `${applicationProperties.bffBaseUrl}category-trees`,
+            // 'https://loopbact-test.onrender.com/explorer/#/VtexController/VtexController.getVtexCategoryTreeloopback',
           )
           .then(response => {
             setApiData(response.data);
