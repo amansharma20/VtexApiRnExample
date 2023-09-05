@@ -36,7 +36,8 @@ export default function BottomTabNavigator() {
       }}>
       <Tab.Screen
         name="Home"
-        component={SushittoHomeScreen}
+        component={HomeScreen}
+        // component={SushittoHomeScreen}
         options={{
           tabBarIcon: ({focused, color}) => {
             return (
